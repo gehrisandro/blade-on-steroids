@@ -11,6 +11,12 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__ . '/src',
     ]);
 
+    $rectorConfig->skip([
+        \Rector\Php74\Rector\Closure\ClosureToArrowFunctionRector::class => [
+            __DIR__ . '/src/BladeOnSteroidsServiceProvider.php',
+        ],
+    ]);
+
     $rectorConfig->sets([
         LevelSetList::UP_TO_PHP_81,
         SetList::CODE_QUALITY,

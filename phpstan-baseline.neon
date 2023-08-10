@@ -1,0 +1,11 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Cannot call method merge\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/BladeOnSteroidsServiceProvider.php
+
+		-
+			message: "#^Static property BladeOnSteroids\\\\ComponentAttributeBag\\:\\:\\$classMergeCallback \\(callable\\) in isset\\(\\) is not nullable\\.$#"
+			count: 1
+			path: src/ComponentAttributeBag.php
